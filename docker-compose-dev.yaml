@@ -1,0 +1,8 @@
+services:
+
+    ollama-benchmark:
+        container_name: ollama-benchmark
+        build: .
+        command: speed --model llama3.2
+        extra_hosts:
+            - "host.containers.internal:host-gateway"
